@@ -20,8 +20,18 @@ export default {
       }
   },
   created() {
-      this.$http.get('http://jsonplaceholder.typicode.com/posts').then(function(data){
-          this.blogs = data.body.slice(0,10);
+      this.$http.get('https://vue-playlist-b9178-default-rtdb.firebaseio.com/posts.json').then(function(data){
+          // this.blogs = data.body.slice(0,10);
+          return data.json();
+      }).then(function(data){
+        var blogsArray = [];
+        for(let key in data){
+          // console.log(data[key]);
+          data[key].id = key;
+          blogsArray.push(data[key]);
+          console.log(blogsArray);
+        }
+         this.blogs = blogsArray;
       });
   },
   mixins: [searchMixin]
