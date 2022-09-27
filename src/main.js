@@ -11,7 +11,7 @@ Vue.use(VueRouter);
 // Register routes
 const router = new VueRouter({
     routes: Routes,
-    mode: 'history'
+    mode: 'history' //add hash and history
 });
 
 new Vue({
