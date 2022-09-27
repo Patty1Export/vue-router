@@ -1,7 +1,9 @@
 <template>
+  <!--first, add nav element-->
   <nav>
       <ul>
-          <li><router-link to="/" exact>Blog</router-link></li>
+         <!--second, add router link-->
+          <li><router-link to="/" exact>Blog</router-link></li> <!--add exact-->
           <li><router-link to="/add" exact>Add a new blog</router-link></li>
       </ul>
   </nav>
@@ -32,6 +34,7 @@ nav{
   padding: 14px 0;
   margin-bottom: 40px;
 }
+
 .router-link-active{
   background: #eee;
   color: #444;

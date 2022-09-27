@@ -1,6 +1,7 @@
 <template>
   <div>
       <!--Setting Up Router-->
+      <!--add header-->
       <app-header></app-header>
       <router-view></router-view>
   </div>
@@ -10,10 +11,10 @@
 // Imports
 import showBlogs from './components/showBlogs.vue';
 import listBlogs from './components/listBlogs.vue';
-import header from './components/header.vue';
+import header from './components/header.vue'; //third, import header
 export default {
   components: {
-      'app-header': header
+      'app-header': header //fourth, add component of the header
   },
   data () {
       return {
